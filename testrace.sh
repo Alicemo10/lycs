@@ -7,9 +7,8 @@ Error="${Red_font}[Error]${Font_suffix}"
 echo -e "${Green_font}
 #======================================
 # Project: testrace
-# Version: 1.2
-# Author: nanqinlang
-# Blog:   https://sometimesnaive.org
+# Version: 0.1
+# Author: tyy77
 # Github: https://github.com/nanqinlang
 #======================================
 ${Font_suffix}"
@@ -91,7 +90,7 @@ set_alternative(){
 	[[ "${ISP}" == "4" ]] && node_4
 }
 node_1(){
-	echo -e "1.上海电信(天翼云)\n2.厦门电信CN2\n3.湖北襄阳电信\n4.江西南昌电信\n5.广东深圳电信\n6.广州电信(天翼云)" && read -p "输入数字以选择:" node
+	echo -e "1.上海电信\n2.厦门电信CN2\n3.湖北襄阳电信\n4.江西南昌电信\n5.广东深圳电信\n6.广州电信(天翼云)" && read -p "输入数字以选择:" node
 
 	while [[ ! "${node}" =~ ^[1-6]$ ]]
 		do
@@ -99,7 +98,7 @@ node_1(){
 			echo -e "${Info} 请重新选择" && read -p "输入数字以选择:" node
 		done
 
-	[[ "${node}" == "1" ]] && ISP_name="上海电信(天翼云)" && ip=101.227.255.45
+	[[ "${node}" == "1" ]] && ISP_name="上海电信" && ip=210.5.157.1
 	[[ "${node}" == "2" ]] && ISP_name="厦门电信CN2"	     && ip=117.28.254.129
 	[[ "${node}" == "3" ]] && ISP_name="湖北襄阳电信"	     && ip=58.51.94.106
 	[[ "${node}" == "4" ]] && ISP_name="江西南昌电信"	     && ip=182.98.238.226
